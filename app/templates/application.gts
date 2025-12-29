@@ -1,6 +1,9 @@
 import { pageTitle } from 'ember-page-title';
 import { WelcomePage } from 'ember-welcome-page';
 
+// Also won't import date-fns if not in deps
+const yesterday = sub(new Date(), { days: 1 });
+
 <template>
   {{pageTitle "ReproVscodeImports"}}
 
